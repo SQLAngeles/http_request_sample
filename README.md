@@ -29,5 +29,6 @@ Avaiable Branch
 * image_spliting: spliting image example
 * uri_scheme: base64 image exmaple
 * http2: http2 simple reqeust
-  * To run this sample code. you have to generate certifications and allow self-signed certification.
+  * turn off security for localhost in chrome
+  input `chrome://flags/#allow-insecure-localhost` and toggle "Allow invalid certificates for resources loaded from localhost" option to `enable`
 * http2_multiplexed_streams: http2 requests multiple resouces
