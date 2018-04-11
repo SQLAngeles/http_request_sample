@@ -18,13 +18,13 @@ Avaiable Branch
   * to test this example, you have add following domain in your hosts file
   example hosts file
   ```
-  localhost a.com
-  localhost b.com
-  localhost c.com
-  localhost d.com
-  localhost e.com
-  localhost f.com
-  localhost g.com
+  127.0.0.1 a.com
+  127.0.0.1 b.com
+  127.0.0.1 c.com
+  127.0.0.1 d.com
+  127.0.0.1 e.com
+  127.0.0.1 f.com
+  127.0.0.1 g.com
   ```
 * image_spliting: spliting image example
 * uri_scheme: base64 image exmaple
