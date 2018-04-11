@@ -10,13 +10,11 @@ const options = {
     key: fs.readFileSync(__dirname + '/server.key'),
     cert:  fs.readFileSync(__dirname + '/server.crt')
 }
-spdy
-  .createServer(options, app)
-  .listen(3000, (error) => {
+spdy.createServer(options, app).listen(3000, (error) => {
     if (error) {
-      console.error(error)
-      return process.exit(1)
+        console.error(error)
+        return process.exit(1)
     } else {
         console.log('Example app listening on port 3000!');
     }
-  })
+});
