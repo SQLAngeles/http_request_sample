@@ -12,11 +12,13 @@
 <div id="icons"></div>
 </body>
 <script>
-    const myDomains = ["a.com", "b.com", "c.com", "d.com", "e.com", "f.com"];
+    const myDomains = ["a.com", "b.com", "c.com", "d.com", "e.com", "f.com", "g.com"];
 
-    for (step = 0; step < 2000; step++) {
-        let url = myDomains[Math.floor(Math.random()*myDomains.length)];
-        document.getElementById("icons").insertAdjacentHTML('beforeend', `<img src="http://${url}:3000/static/small_icon.png?${step}">`);
+    for (step = 0; step < 100; step++) {
+        // single domain
+        document.getElementById("icons").insertAdjacentHTML('beforeend', `<img src="http://${myDomains[0]}:3000/static/small_icon.png?${step}">`);
+        // multi domains
+        // document.getElementById("icons").insertAdjacentHTML('beforeend', `<img src="http://${myDomains[step%5]}:3000/static/small_icon.png?${step}">`);
     }
 </script>
 </html>
