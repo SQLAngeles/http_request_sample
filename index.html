@@ -16,9 +16,10 @@
 
     for (step = 0; step < 100; step++) {
         // single domain
-        document.getElementById("icons").insertAdjacentHTML('beforeend', `<img src="http://${myDomains[0]}:3000/static/small_icon.png?${step}">`);
+        // remove comment if you want test single domain requests
+        // document.getElementById("icons").insertAdjacentHTML('beforeend', `<img src="http://${myDomains[0]}:3000/static/small_icon.png?${step}">`);
         // multi domains
-        // document.getElementById("icons").insertAdjacentHTML('beforeend', `<img src="http://${myDomains[step%5]}:3000/static/small_icon.png?${step}">`);
+        document.getElementById("icons").insertAdjacentHTML('beforeend', `<img src="http://${myDomains[step%5]}:3000/static/small_icon.png?${step}">`);
     }
 </script>
 </html>
