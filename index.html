@@ -4,9 +4,16 @@
 <meta charset="UTF-8">
 <title>HTTP request sample</title>
 </head>
-
+<style>
+    img { width: 20px; height: 20px; }
+</style>
 <body>
-<h1>Hello, World!</h1>
+<h1>Domain Sharing Exmaple</h1>
+<div id="icons"></div>
 </body>
-
+<script>
+    for (step = 0; step < 100; step++) {
+        document.getElementById("icons").insertAdjacentHTML('beforeend', `<img src="https://localhost:3000/static/small_icon.png?${step}">`);
+    }
+</script>
 </html>
