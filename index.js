@@ -7,7 +7,12 @@ const path = require("path");
 app.get('/', (req, res) => res.sendFile(path.join(__dirname+'/index.html')));
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
-spdy.createServer({}, app).listen(3000, (error) => {
+const options = {
+    key: fs.readFileSync('./server.key'),
+    cert: fs.readFileSync('./server.crt')
+}
+
+spdy.createServer(options, app).listen(3000, (error) => {
     if (error) {
         console.error(error)
         return process.exit(1)
