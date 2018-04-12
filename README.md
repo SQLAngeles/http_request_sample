@@ -31,4 +31,13 @@ Avaiable Branch
 * http2: http2 simple reqeust
   * turn off security for localhost in chrome
   input `chrome://flags/#allow-insecure-localhost` and toggle "Allow invalid certificates for resources loaded from localhost" option to `enable`
+  
+  #### Generate Keys and Certs
+  ```
+  $openssl genrsa -des3 -passout pass:x -out server.pass.key 2048
+  $openssl rsa -passin pass:x -in server.pass.key -out server.key
+  $rm server.pass.key
+  $openssl req -new -key server.key -out server.csr
+  $openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out server.crt
+  ```
 * http2_multiplexed_streams: http2 requests multiple resouces
